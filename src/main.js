@@ -8,7 +8,6 @@ import Foo from './components/Foo'
 import Bar from './components/Bar'
 
 Vue.use(VueRouter)
-Vue.use(Vuex)
 
 const routes = [
   { path: '/', component: Foo },
