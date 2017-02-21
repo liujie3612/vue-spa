@@ -1,15 +1,17 @@
 <template>
   <div class="bar">
-    <h1>{{ msg }}</h1>
+    <button @click='increment'>Increment +1</button>
   </div>
 </template>
 
 <script>
+import { incrementCounter } from '../vuex/actions'
+
 export default {
   name: 'bar',
-  data () {
-    return {
-      msg: 'bar'
+  vuex: {
+    actions: {
+      increment: incrementCounter
     }
   }
 }

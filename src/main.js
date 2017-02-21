@@ -4,32 +4,13 @@ import App from './App'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Foo from './components/Foo'
-import Bar from './components/Bar'
+import store from './vuex/store' // import 我们刚刚创建的 store
 
-Vue.use(VueRouter)
-
-const routes = [
-  { path: '/', component: Foo },
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
-]
-
-const router = new VueRouter({
-  routes
-})
 
 
 /* eslint-disable no-new */
 const app = new Vue({
-  router,
+  store,
   render: h => h(App)
 }).$mount('#app')
 
-
-// another Express
-/*new Vue({
-    el: '#app',
-    router,
-    render: h => h(App)
-});*/

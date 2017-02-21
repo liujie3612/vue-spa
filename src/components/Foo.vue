@@ -1,16 +1,18 @@
 <template>
   <div class="foo">
-    <h1>{{ msg }}</h1>
-    <!-- <div> {{count}} </div> -->
+    <h3>Count is {{ counterValue }}</h3>
   </div>
 </template>
 
 <script>
+import { getCount } from '../vuex/getters'
+
 export default {
   name: 'foo',
-  data () {
-    return {
-      msg: 'Foo'
+  vuex: {
+    getters: {
+      // 注意在这里你需要 `getCount` 函数本身而不是它的执行结果 'getCount()'
+      counterValue: getCount
     }
   }
 }
