@@ -3,7 +3,6 @@
 import App from './App'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
 import store from './vuex/store' // import 我们刚刚创建的 store
 
 
